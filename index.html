@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css" />
+<title>House Rentals with Chat</title>    
+</head>
+<body>
+
+<div class="container">
+    <h1>House Rental Upload</h1>
+    <form id="uploadForm">
+        <label>Title</label>
+        <input type="text" id="title" placeholder="2-Bedroom Apartment in Lekki" required>
+
+        <label>Description</label>
+        <textarea id="description" placeholder="Describe your property..." required></textarea>
+        
+        <label>Price (₦)</label>
+    <input type="text" id="price" placeholder="500,000" required>
+    
+
+        <label>Location</label>
+        <input type="text" id="location" placeholder="City, State" required>
+
+        <label>Upload Media (images/videos)</label>
+        <input type="file" id="mediaInput" accept="image/*,video/*" multiple>
+
+        <button type="submit">Add Listing</button>
+    </form>
+
+    <h2>Listings</h2>
+    <div class="listing-grid" id="listingGrid"></div>
+</div>
+
+<!-- Listing Modal -->
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <span class="modal-close" id="modalClose">&times;</span>
+        <div class="modal-header">
+            <h3 id="modalTitle"></h3>
+            <p id="modalLocation" class="location"></p>
+        </div>
+        <div class="modal-body">
+            <div class="modal-media" id="modalMedia"></div>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+</div>
+
+<!-- Chat Modal -->
+<div class="chat-modal" id="chatModal">
+    <div class="chat-header">
+        <span>Chat</span>
+        <span id="chatClose" style="cursor:pointer;">&times;</span>
+    </div>
+    <div class="chat-messages" id="chatMessages"></div>
+    <div class="chat-input">
+        <input type="text" id="chatInput" placeholder="Type message..." />
+        <button id="chatSend">Send</button>
+    </div>
+</div>
+
+
+</body>
+</html>
